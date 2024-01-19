@@ -7,6 +7,25 @@
   pointer-events: none;
 }
 
+.list-group {
+  max-width: 60%;
+}
+.list-group li {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.list-group li input{
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+.list-group li svg {
+  margin-left: auto;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
