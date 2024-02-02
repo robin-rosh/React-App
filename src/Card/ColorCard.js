@@ -49,7 +49,7 @@ export default function ColorCard() {
 
   const [colorText, setColorText] = useState('');
 
-  let colorValues = colors.filter((color) => color.text == colorText)
+  let colorValues = colors.filter((color) => color.text.toLocaleLowerCase() == colorText.toLocaleLowerCase())
   
   const colorToggle = (id) => {
     const updatedColors = colors.map(
@@ -74,7 +74,7 @@ export default function ColorCard() {
             ))
             ) : (
             <div className="d-flex justify-content-center align-items-center" style={{ width: '100%', height: '300px', border: '1px solid rgb(0 0 0 / 18%)' }}>
-                <p>Default</p>
+                <p>Enter color</p>
             </div>
         )}
         <Card.Body>
