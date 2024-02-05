@@ -6,7 +6,7 @@ const Content = ({checkItems, updateItems, removeItem}) => {
     if(checkItems) {
         return (
         <div>
-            <ListGroup as="ul" className="m-auto w-75 text-center mb-3 mt-3 d-none">
+            <ListGroup as="ul" className="m-auto w-75 text-center mb-3 mt-3">
                 {checkItems.map((item, index) => (
                     <List item = {item} key = {index} index = {index} updateItems = {updateItems} removeItem = {removeItem} />
                 ) )}

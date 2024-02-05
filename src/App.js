@@ -3,7 +3,7 @@ import Content from './Content'
 import Footer from './Footer'
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css'
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AddItem from './List/AddItem'
 import ColorCard from './Card/ColorCard'
 
@@ -37,11 +37,12 @@ function App() {
     localStorage.setItem("list", JSON.stringify(updateCheckItems))
     setCheckItems(updateCheckItems)
   }
+  const inputRef = useRef('')
   return (
     <div>
-      <AddItem newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit} />
+      <AddItem newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit} inputRef = {inputRef} />
       <Content checkItems={checkItems} updateItems={updateItems} removeItem={removeItem} />
-      <ColorCard ></ColorCard>
+      {/* <ColorCard></ColorCard> */}
     </div>
   );
 }
